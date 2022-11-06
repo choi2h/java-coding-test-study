@@ -14,8 +14,8 @@ class Main {
             arr[i] = Integer.parseInt(br.readLine());
         }
         
-        int num = 1;
-        int i = 0;
+        int num = 1; // 1 ~ length
+        int i = 0; // 입력받은 수열의 index
         Stack<Integer> stack = new Stack<>();
         StringBuilder sb = new StringBuilder();
         
