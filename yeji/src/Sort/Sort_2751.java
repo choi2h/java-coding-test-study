@@ -1,3 +1,5 @@
+package Sort;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +8,7 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Backjoon_2751 {
+public class Sort_2751 {
 
     public static void main(String[] args) throws IOException {
 

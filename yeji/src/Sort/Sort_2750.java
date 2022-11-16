@@ -1,6 +1,8 @@
+package Sort;
+
 import java.util.*;
 
-public class Backjoon_2750 {
+public class Sort_2750 {
 
     /**
      * 문제
