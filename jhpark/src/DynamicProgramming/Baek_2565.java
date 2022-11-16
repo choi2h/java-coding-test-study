@@ -14,7 +14,7 @@ import java.util.Comparator;
 //둘중에 더 큰값이 남길 수 있는 최대값
 
 /**
- * 문제풀이방법
+ * 문제풀이방법 (LIS)
  * A를 오름 차순으로 정렬
  * B에서 증가하는 부분수열 찾기
  */
@@ -45,13 +45,13 @@ public class Baek_2565 {
                 return o1[0] - o2[0];
             }
         });
-//        for(int i =0;i<n;i++){
-//            for(int j=0;j<2;j++){
-//                System.out.print(A[i][j]);
-//            }
-//            System.out.println();
-//        }
-        int rs = useLIS();
+        for(int i =0;i<n+1;i++){
+            for(int j=0;j<2;j++){
+                System.out.print(A[i][j]);
+            }
+            System.out.println();
+        }
+        int rs = allJoin();
         System.out.println(n - rs);
 
     }

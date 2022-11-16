@@ -27,19 +27,19 @@ public class Back_12865 {
         }
 
 
-        System.out.println(excuteDP(0,0));
+        System.out.println(excute(0,0));
     }
 
     /**
-     * 2의 n승인 모든 경우의 수를 확인하게 되므로 시간초과 발생
+     * 모든 경우의 수를 확인하게 되므로 시간초과 발생
      */
     public static int excute(int i, int w){ //현재까지 인덱스, 현재 무게
-        if (i == n){
+        if (i == n){//length에 해당하는 값은 없으므로 0 리턴
             return 0;
         }
 
         //포함 시키는 경우
-        int n1= 0;
+        int n1= 0; //가치
         if(w+W[i]<=k){//현재무게와 더하려는 무게가 가방에 넣을 수 있을 경우에만 포함시킨다
             n1 = V[i] + excute(i+1,w + W[i]); //인덱스의 가치를 더하고, 인덱스 하나 증가, 무게도 증가
         }
@@ -60,7 +60,7 @@ public class Back_12865 {
         if(dp[i][w]>0){
             return dp[i][w]; // 저장되어 있는 값이 있다면 리턴해라
         }
-        if (i == n){
+        if (i == n){//length에 해당하는 값은 없으므로 0 리턴
             return 0;
         }
 

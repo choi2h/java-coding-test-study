@@ -10,7 +10,6 @@ public class Baek_1931 {
     static int[] start,finish;
     static int[][] G;
 
-
     /**
      * 생각하기
      * 1. 수업이 짧은 강의 부터? X
@@ -34,14 +33,18 @@ public class Baek_1931 {
 //            start[x] = Integer.parseInt( data.split(" ")[0]);
 //            finish[x] = Integer.parseInt( data.split(" ")[1]);
 
-            G[x][0] = Integer.parseInt( data.split(" ")[1]); //끝나는 시간
-            G[x][1] = Integer.parseInt( data.split(" ")[0]); // 시작 시간
+            G[x][0] = Integer.parseInt( data.split(" ")[0]); //시작 시간
+            G[x][1] = Integer.parseInt( data.split(" ")[1]); //끝난 시간
         }
         //끝나는 시간인 finish[] 의 오름차순 정렬 필요
         Arrays.sort(G, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
-                return o1[0] - o2[0];
+                if(o1[1] == o2[1]){
+                    return o1[0] - o2[0];
+                }else{
+                    return o1[1] - o2[1];
+                }
             }
         });
 
@@ -52,7 +55,7 @@ public class Baek_1931 {
 //                rs++;
 //                k = i;
 //            }
-            if(G[i][1]>=G[k][0]){ //강의 i와 k가 겹치지 않음
+            if(G[i][0]>=G[k][1]){ //강의 i와 k가 겹치지 않음
                 rs++;
                 k = i;
             }
